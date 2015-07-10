@@ -32,6 +32,9 @@ try {
         return str_replace('patching file ', '', $line);
     }, $lines));
 
+    // Also include the patches file so that any future people know what's been applied
+    $patchedFiles[] = 'app/etc/applied.patches.list';
+
     echo 'Preparing to patch '.count($patchedFiles).' file(s)...'.PHP_EOL.PHP_EOL;
 
     foreach ($patchedFiles as $patchedFile) {
