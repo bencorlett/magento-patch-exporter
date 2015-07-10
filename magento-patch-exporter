@@ -46,8 +46,8 @@ Exporting...
 
 OUTPUT;
 
-        if (!is_dir($destionationDirectory = dirname($destination))) {
-            mkdir($destionationDirectory, 0755, true);
+        if (!is_dir($destinationPath = dirname($destination))) {
+            mkdir($destinationPath, 0755, true);
         }
 
         if (!@copy($source, $destination)) {
